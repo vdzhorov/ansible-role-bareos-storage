@@ -1,0 +1,6 @@
+---
+
+- name: Restart bareos-sd
+  service:
+    name: bareos-sd
+    state: restarted
