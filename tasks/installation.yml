@@ -1,0 +1,13 @@
+---
+
+- name: Install storage daemon package
+  yum:
+    name: bareos-sd
+    state: installed
+  tags: [bareos-storage]
+
+- name: Enable and start storage daemon
+  service:
+    name: bareos-sd
+    enabled: yes
+  tags: [bareos-storage]

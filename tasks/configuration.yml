@@ -1,0 +1,31 @@
+---
+
+- name: Configure /etc/bareos/bareos-sd.d/director/bareos-dir.conf (Storage)
+  template:
+    src: "bareos-dir.conf.j2"
+    dest: "/etc/bareos/bareos-sd.d/director/bareos-dir.conf"
+    owner: "{{ bareos_owner }}"
+    group: "{{ bareos_group }}"
+    mode: 0640
+  notify: Restart bareos-sd
+  tags: [bareos-storage]
+
+- name: Configure /etc/bareos/bareos-sd.d/bareos-sd.conf (Storage)
+  template:
+    src: "bareos-sd.conf.j2"
+    dest: "/etc/bareos/bareos-sd.d/bareos-sd.conf"
+    owner: "{{ bareos_owner }}"
+    group: "{{ bareos_group }}"
+    mode: 0640
+  notify: Restart bareos-sd
+  tags: [bareos-storage]
+
+- name: Configure /etc/bareos/bareos-sd.d/device/FileStorage.conf (Storage)
+  template:
+    src: "FileStorage.conf.j2"
+    dest: "/etc/bareos/bareos-sd.d/device/FileStorage.conf"
+    owner: "{{ bareos_owner }}"
+    group: "{{ bareos_group }}"
+    mode: 0640
+  notify: Restart bareos-sd
+  tags: [bareos-storage]
