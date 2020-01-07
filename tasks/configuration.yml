@@ -13,7 +13,7 @@
 - name: Configure {{ bareos_location }}/bareos-sd.d/bareos-sd.conf (Storage)
   template:
     src: "bareos-sd.conf.j2"
-    dest: "{{ bareos_location }}/bareos-sd.d/bareos-sd.conf"
+    dest: "{{ bareos_location }}/bareos-sd.d/storage/bareos-sd.conf"
     owner: "{{ bareos_owner }}"
     group: "{{ bareos_group }}"
     mode: 0640
