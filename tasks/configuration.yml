@@ -22,7 +22,7 @@
 
 - name: Configure {{ bareos_location }}/bareos-sd.d/device/FileStorage.conf (Storage)
   template:
-    src: "FileStorage.conf.j2"
+    src: "Device.conf.j2"
     dest: "{{ bareos_location }}/bareos-sd.d/device/FileStorage.conf"
     owner: "{{ bareos_owner }}"
     group: "{{ bareos_group }}"
