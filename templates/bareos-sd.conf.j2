@@ -1,6 +1,6 @@
 Storage {
   Name = bareos-sd
-  Maximum Concurrent Jobs = {{ bareos_max_concurrent_jobs + 10 }}
+  Maximum Concurrent Jobs = {{ bareos_max_concurrent_jobs }}
   Maximum Bandwidth Per Job = {{ bareos_max_bandwidth_per_job }}
   Maximum Connections = {{ bareos.storage.maximum_connections }}
   TLS Enable = No
