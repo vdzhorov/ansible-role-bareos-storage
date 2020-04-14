@@ -2,12 +2,12 @@
   Name = FileStorage{{ n }}
   Media Type = {{ bareos.storage.bareos_archive_type }}
   Archive Device = {{ bareos.storage.bareos_archive_device }}
-  LabelMedia = yes;                   # lets Bareos label unlabeled media
-  Random Access = yes;
-  AutomaticMount = yes;               # when device opened, read it
-  RemovableMedia = no;
-  AlwaysOpen = no;
-  Description = "File device. A connecting Director must have the same Name and MediaType."
+  LabelMedia = {{ bareos_storage_label_media }};                   # lets Bareos label unlabeled media
+  Random Access = {{ bareos_storage_random_access }};
+  AutomaticMount = {{ bareos_storage_automatic_mount }};               # when device opened, read it
+  RemovableMedia = {{ bareos_storage_removable_media }};
+  AlwaysOpen = {{ bareos_storage_always_open }};
+  Description = "File device {{ ansible_host }}. A connecting Director must have the same Name and MediaType."
   Maximum Concurrent Jobs = 1
 
 }

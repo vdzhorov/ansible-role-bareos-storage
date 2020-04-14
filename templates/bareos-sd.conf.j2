@@ -3,7 +3,7 @@ Storage {
   Maximum Concurrent Jobs = {{ bareos_max_concurrent_jobs }}
   Maximum Bandwidth Per Job = {{ bareos_max_bandwidth_per_job }}
   Maximum Connections = {{ bareos.storage.maximum_connections }}
-  TLS Enable = No
+  TLS Enable = {{ bareos_storage_tls_enable }}
 
   # remove comment from "Plugin Directory" to load plugins from specified directory.
   # if "Plugin Names" is defined, only the specified plugins will be loaded,
