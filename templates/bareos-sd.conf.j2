@@ -1,8 +1,8 @@
 Storage {
   Name = bareos-sd
-  Maximum Concurrent Jobs = {{ bareos_max_concurrent_jobs }}
-  Maximum Bandwidth Per Job = {{ bareos_max_bandwidth_per_job }}
-  Maximum Connections = {{ bareos.storage.maximum_connections }}
+  Maximum Concurrent Jobs = {{ bareos_storage_max_concurrent_jobs }}
+  Maximum Bandwidth Per Job = {{ bareos_storage_max_bandwidth_per_job }}
+  Maximum Connections = {{ bareos_storage_maximum_connections }}
   TLS Enable = {{ bareos_storage_tls_enable }}
 
   # remove comment from "Plugin Directory" to load plugins from specified directory.
