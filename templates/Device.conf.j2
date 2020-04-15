@@ -1,7 +1,7 @@
 {% for n in range(1, (bareos_storage_max_concurrent_jobs + 1)) %}Device {
   Name = FileStorage{{ n }}
-  Media Type = {{ bareos.storage.bareos_archive_type }}
-  Archive Device = {{ bareos.storage.bareos_archive_device }}
+  Media Type = {{ bareos_storage_bareos_archive_type }}
+  Archive Device = {{ bareos_storage_bareos_archive_device}}
   LabelMedia = {{ bareos_storage_label_media }};                   # lets Bareos label unlabeled media
   Random Access = {{ bareos_storage_random_access }};
   AutomaticMount = {{ bareos_storage_automatic_mount }};               # when device opened, read it
