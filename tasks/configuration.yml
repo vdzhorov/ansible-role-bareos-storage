@@ -29,3 +29,14 @@
     mode: 0640
   notify: Restart bareos-sd
   tags: [bareos-storage]
+
+- name: Ensure that storage directory exists and is with correct permissions
+  file:
+    path: "{{ bareos_storage_bareos_archive_device }}"
+    state: directory
+    owner: "{{ bareos_owner }}"
+    group: "{{ bareos_group }}"
+    mode: 0755   
+  notify: Restart bareos-sd
+  tags: [bareos-storage]
+...
