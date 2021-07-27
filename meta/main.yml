@@ -1,7 +1,6 @@
 ---
 
-dependencies:
-  - vdzhorov.ansible_role_bareos_base
+dependencies: []
 
 galaxy_info:
   role_name: bareos_storage
